@@ -1,0 +1,6 @@
+{
+    "name": "mypackages/calculator",
+    "description": "this is calculator",
+    "type": "library",
+    "require": {}
+}
