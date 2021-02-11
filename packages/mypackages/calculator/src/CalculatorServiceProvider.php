@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace MyPackages\Calculator;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +13,8 @@ class CalculatorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // register our controller
+        $this->app->make('MyPackages\Calculator\CalculatorController');
     }
 
     /**
@@ -23,6 +24,6 @@ class CalculatorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        include __DIR__.'/routes.php';
     }
 }
